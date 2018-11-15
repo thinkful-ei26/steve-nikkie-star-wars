@@ -6,17 +6,6 @@ const colors = require('colors')
 //this will be the search term
 const searchTerm = process.argv[2]
 
-// $ node starwars.js "jar jar"
-
-// [JAR JAR BINKS] has been found!
-// [He] has starred in the following films:
-
-// 1. Star Wars: The Phantom Menace
-// 2. Star Wars: Attack of the Clones
-// [INSTRUCTION: list should be sorted in order of release]
-
-// [He] has also been associated with a total of [#] vehicles and [#] starships.
-
 axios
   .get(`https://swapi.co/api/people/?search=${searchTerm}`)
   .then(person => {
